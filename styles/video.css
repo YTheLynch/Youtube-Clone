@@ -1,0 +1,125 @@
+.thumbnail {
+    /* width: 300px; /* setting width also changes the height of the image 
+    if both height and width are set then the image gets stretched to match the dimensions*/
+    /* height: 300px; */
+    /*object-fit: contain;
+    object-position: right;
+    */
+    width: 100%;
+    /* display: block; */
+}
+
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    /* regular bold - 400
+    medium - 500
+    bold - 700 */
+    line-height: 20px;
+    margin-bottom: 10px;
+    
+}
+
+/*to target multiple classes we can put them separated by a comma in a single selector*/
+.video-author, .video-stats {
+    /* display: inline-block;
+    /*block elements like paragraph take up a whole line on the screen
+    inline block elements only take as much space as the size of their block is 
+    we can change block/inline-block using the display property*/ 
+    font-size: 12px;
+    color: rgb(96,96,96);
+}
+
+.video-author {
+    margin-bottom: 4px;
+}
+
+.video-preview {
+    /* width: 300px; */
+    /* display: inline-block;
+    vertical-align: top;
+    margin-right: 20px; */
+}
+
+.channel-picture {
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.video-info {
+    display: inline-block;
+    width: 200px;
+}
+
+.profile-picture {
+    /* width: 100%; takes the entire space of its container */
+    width: 36px;
+    border-radius: 50px;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* for responsivity */
+
+/* these are known as media queries */
+/* this css only activates when screen size is 600px or lesser */
+
+@media (max-width: 900px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 550px){
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1150px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video-time {
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500;
+    /*font weight of 400 is normal 500 is semi bold 700 is bold*/
+    /* padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px; */
+    padding: 4px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+}
+
+.video-title-link {
+    color: black;
+    text-decoration: none;
+}
+
+.channel-link {
+    color: rgb(96,96,96);
+    text-decoration: none;
+}
